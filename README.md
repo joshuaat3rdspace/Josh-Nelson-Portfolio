@@ -26,6 +26,18 @@ I build the AI, data, and automation systems that a revenue org runs on. Over th
 | [08 - Icarus: Sovereign Two-Tier AI Assistant](08-icarus-ai/) | A personal AI stack owned end to end: a Modal serverless-GPU cloud tier plus a local Ollama tier with RAG, vision, voice, and human-approved code execution. |
 | [09 - Masterworks CRM & AI Toolkit](09-crm-ai-toolkit/) | A suite of CRM, sales-ops, and AI tools (lead routing, AI voice and SMS, call analysis, compliance archiving) built to run a high-growth outbound sales org. |
 
+## More work (available on request)
+
+A selection of other systems I have built and can walk through on request:
+
+- **Inbound lead routing (Nooks)** - a multi-version chatbot routing layer plus a 28-rule Chili Piper engine with segment logic and UTM attribution, including the re-architecture of an enrichment/routing race that was silently overwriting account owners.
+- **Embedded HubSpot CRM cards (Nooks)** - six React/JSX UI-extension apps used daily by go-to-market teams (stakeholder tracking, ownership requests, upsell and trial-skip flows, in-CRM enrichment).
+- **Strategic analysis and business cases (Nooks)** - an addressable-market study for a self-service motion, and a statistically rigorous account-scoring predictiveness comparison that reshaped how outbound effort is prioritized.
+- **Infrastructure ownership (Nooks)** - migrating a large production service estate to org-owned infrastructure, decomposing a monolith into per-service repos, and inventorying the full HubSpot automation estate.
+- **Cortex Engine and the Third Space app suite** - shared backend services powering The Gateway (a guided multi-session program), Journey Builder (a binaural frequency studio), and Min/Max (an optimization lab).
+- **Safe Merge / Emergency Unmerge** - a HubSpot data-protection product that snapshots records before a merge and can reverse a bad bulk merge.
+- **robot-jamboree** - two AI agents holding an organic, ongoing conversation over Telegram.
+
 ## By the numbers
 
 The scope of what I have built and operate (my own footprint, not company financials):
