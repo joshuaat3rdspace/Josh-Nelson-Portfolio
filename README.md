@@ -3,11 +3,11 @@
 **AI Operations & RevOps Systems Engineer** · San Francisco, CA
 [LinkedIn](https://www.linkedin.com/in/joshmichaelnelson/)
 
-I build the AI, data, and automation systems that a revenue org runs on. Over the past year at Nooks (an AI sales-tech startup), I designed and now operate a 16-agent internal AI system, two from-scratch MCP servers, LLM-as-judge auditing, an AI-consumable knowledge base, and the PostgreSQL data platform underneath all of it. My bias is to turn manual, error-prone work into systems that are automated, auditable, and safe for non-technical teams to use.
+I build the AI, data, and automation systems that a revenue org runs on. Over the past year at Nooks (an AI sales-tech startup), I designed and now operate a 16-agent internal AI system, two from-scratch MCP servers, LLM-as-judge auditing, an AI-consumable knowledge base, and the PostgreSQL data platform underneath all of it. Alongside that, I built my own end-to-end AI stack (Icarus) and, earlier, a broad toolkit of CRM and AI tools for a high-growth outbound sales org. My bias is to turn manual, error-prone work into systems that are automated, auditable, and safe for non-technical teams to use.
 
-**About this portfolio.** The production systems below run against a company's live CRM, warehouse, and customer data, so their source is proprietary and is not published here. Each folder is an architecture writeup plus one illustrative, genericized code sample: the patterns and design decisions are real, the business logic, identifiers, and data are not. This is the right way to show this kind of work without compromising an employer.
+**About this portfolio.** Most of the production systems below run against a company's live CRM, warehouse, and customer data, so their source is proprietary and is not published here. Each folder is an architecture writeup plus a code sample: for my own projects (Icarus) the sample is a real, tidied excerpt; for employer work it is illustrative and genericized. The patterns and design decisions are real; the business logic, identifiers, and data are not. This is the right way to show this kind of work without compromising an employer.
 
-## Selected work
+## AI operations and RevOps engineering (Nooks)
 
 | Project | What it is |
 |---|---|
@@ -17,6 +17,14 @@ I build the AI, data, and automation systems that a revenue org runs on. Over th
 | [04 - AI Knowledge Base + Process Tracing](04-ai-knowledge-base/) | 278 machine-readable process specs that let agents resolve "how does X work / why is it broken" down to repo, service, entry point, and live runtime state. |
 | [05 - RevOps Data Platform](05-data-platform/) | A unified PostgreSQL warehouse fed by roughly 13 incremental ETLs, with cross-source identity resolution and snapshot-before-mutate safety on live-revenue writes. |
 | [06 - One-Click AI Reporting](06-one-button-qbr/) | A CRM card that turns live product usage into a narrated Quarterly Business Review deck in about a minute, via an async job runner and Claude. |
+| [07 - Revenue Integrity & Data-Quality Forensics](07-revenue-integrity/) | Finding silent, revenue-distorting data bugs, proving them adversarially, and shipping durable guards so they stay fixed. |
+
+## Independent and earlier work
+
+| Project | What it is |
+|---|---|
+| [08 - Icarus: Sovereign Two-Tier AI Assistant](08-icarus-ai/) | A personal AI stack owned end to end: a Modal serverless-GPU cloud tier plus a local Ollama tier with RAG, vision, voice, and human-approved code execution. |
+| [09 - Masterworks CRM & AI Toolkit](09-crm-ai-toolkit/) | A suite of CRM, sales-ops, and AI tools (lead routing, AI voice and SMS, call analysis, compliance archiving) built to run a high-growth outbound sales org. |
 
 ## By the numbers
 
@@ -32,8 +40,8 @@ The scope of what I have built and operate (my own footprint, not company financ
 
 ## Tech
 
-Claude (Opus / Sonnet) and the Anthropic API, GPT, LLM APIs, MCP server development, multi-agent orchestration (Claude Code), LLM-as-judge and structured extraction, prompt engineering · Python, Node.js, TypeScript, SQL / PostgreSQL, Bash · Redash, ETL and data warehousing · HubSpot (CRM, Automation, UI Extensions), Chili Piper, Subskribe, Gong, Slack, Notion, Zapier, Google Workspace APIs · Render, GitHub Actions, Docker, FastAPI · AWS, GCP
+Claude (Opus / Sonnet) and the Anthropic API, GPT, LLM APIs, MCP server development, multi-agent orchestration (Claude Code), LLM-as-judge and structured extraction, prompt engineering · Python, Node.js, TypeScript, SQL / PostgreSQL, Bash · Redash, ETL and data warehousing · HubSpot (CRM, Automation, UI Extensions), Chili Piper, Subskribe, Gong, Aircall, Slack, Notion, Zapier, Google Workspace APIs · Modal, vLLM, Ollama, Turso, Next.js, Render, GitHub Actions, Docker, FastAPI · AWS, GCP
 
 ## A note on the code samples
 
-Every code file here starts with an "Illustrative sample" comment. Each is a genericized skeleton that shows a real pattern (an MCP OAuth server, an LLM-as-judge pipeline, a snapshot-before-mutate ETL, an async report job runner) with placeholder config read from environment variables. They contain no real endpoints, identifiers, customer data, or secrets. Production implementations are proprietary.
+Every code file here starts with a header comment marking it as a sanitized excerpt (my own projects) or an illustrative, genericized sample (employer work). Config is read from environment variables, and there are no real endpoints, identifiers, customer data, or secrets. Production implementations are proprietary.
