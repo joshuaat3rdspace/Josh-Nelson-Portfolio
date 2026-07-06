@@ -1,0 +1,14 @@
+# Never commit data, secrets, or build junk into a public portfolio
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+*.csv
+*.xlsx
+*.parquet
+*.zip
+*.tar.gz
+*.log
+node_modules/
+.venv/
